@@ -1,20 +1,22 @@
 #!/usr/bin/env bash
+function tgrslp {
+  printf "Sleeping %ss.\n" "$1"
+  sleep "$1"
+  printf "Done sleeping %ss.\n" "$1"
+}
+
 function tgrdltxt {
   printf "Attempting to download:\n'%s'\n" "$1"
   printf "to:\n"
   printf "'%s'\n" "$2"
   curl "$1" --limit-rate "1M" --progress-bar --styled-output --output "$2"
-  printf "Sleeping 5 seconds.\n"
-  sleep 5
-  printf "Done sleeping.\n"
+  tgrslp 5
 }
 
 function tgrdlbin {
   printf "Attempting to download:\n '%s'\n" "$1"
   curl --remote-name "$1" --limit-rate "1M" --progress-bar --styled-output
-  printf "Sleeping 5 seconds.\n"
-  sleep 5
-  printf "Done sleeping.\n"
+  tgrslp 5
 }
 
 function tgrmkdmg {
