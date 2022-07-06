@@ -25,7 +25,6 @@ function tgrmkdmg {
           -fs "Journaled HFS+" \
           -format "UDRO" \
           -volname "Tiger Updates" \
-          -ov \
           -nocrossdev \
           -scrub \
           -atomic \

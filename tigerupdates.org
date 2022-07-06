@@ -58,7 +58,6 @@ function tgrmkdmg {
           -fs "Journaled HFS+" \
           -format "UDRO" \
           -volname "Tiger Updates" \
-          -ov \
           -nocrossdev \
           -scrub \
           -atomic \
@@ -365,9 +364,10 @@ Open the DMG directory:
 open "$TGRDST"
 #+END_SRC
 
-Create it overwriting when it already exists:
+Create it. The command doesn't overwrite the DMG. Although there is a flag for that optimization: experience has shown that to be a regrettable approach despite it being very /speed hackery/.
 
-#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_39D17A7C-F94A-491C-8C00-1D8591D547F1
+#+ NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_39D17A7C-F94A-491C-8C00-1D8591D547F1
+#+NAME: org_grant_2022-07-06T12-27-31-05-00_donutron_37D3728E-2F26-4EB0-98B8-DFDD9A42DB02
 #+BEGIN_SRC sh
 cd "$TGRDST"
 tgrmkdmg "$TGRSRC"
