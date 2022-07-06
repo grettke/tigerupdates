@@ -57,7 +57,7 @@ tgrdltxt "https://support.apple.com/kb/dl304?locale=en_US" "X11 Update 2006.html
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2901.20061113.iUnrq/X11Update2006.dmg"
 
-tgrdltxt "https://support.apple.com/kb/DL713?locale=en_US" "Migration and DVD/CD Sharing Update.html"
+tgrdltxt "https://support.apple.com/kb/DL713?locale=en_US" "Migration and DVD-CD Sharing Update.html"
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-5623.20081016.mju2Q/MigrationDVDCDSharingUp.dmg"
 

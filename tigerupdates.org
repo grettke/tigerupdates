@@ -181,7 +181,7 @@ tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2901.20061113.iUnrq/X11Up
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_27F92313-0879-425C-8F8F-4B7D0789FF7E
 #+BEGIN_SRC sh
-tgrdltxt "https://support.apple.com/kb/DL713?locale=en_US" "Migration and DVD/CD Sharing Update.html"
+tgrdltxt "https://support.apple.com/kb/DL713?locale=en_US" "Migration and DVD-CD Sharing Update.html"
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-5623.20081016.mju2Q/MigrationDVDCDSharingUp.dmg"
 #+END_SRC
