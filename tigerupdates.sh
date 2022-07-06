@@ -95,7 +95,7 @@ cd "$TGRSRC"
 mkdir 04
 cd 04
 
-tgrdltxt "https://support.apple.com/kb/dl281?locale=en_US" "Java for Mac OS X 10.4 Release 5.html"
+tgrdltxt "https://support.apple.com/kb/dl281?locale=en_US" "Java for Mac OS X 10.4, Release 5.html"
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2829.20070215.Tj5Up/JavaForMacOSX10.4Release5.dmg"
 
