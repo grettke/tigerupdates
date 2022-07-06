@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 function tgrdltxt {
   curl "$1" --limit-rate "1M" --progress-bar --styled-output --output "$2"
   printf "Sleeping 5 seconds.\n"
@@ -45,7 +44,7 @@ tgrdltxt "https://support.apple.com/kb/DL441?locale=en_US" "Java 1.3.1 and 1.4.2
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2072.20050913.jVTr2/Java131and142Release2.dmg"
 
-tgrdltxt "https://support.apple.com/kb/dl170?locale=en_US" "Mac OS X 10.4.11 Combo Update (PPC)"
+tgrdltxt "https://support.apple.com/kb/dl170?locale=en_US" "Mac OS X 10.4.11 Combo Update (PPC).html"
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-3461.20071114.8Uy45/MacOSXUpdCombo10.4.11PPC.dmg"
 
@@ -62,11 +61,11 @@ tgrdltxt "https://support.apple.com/kb/DL713?locale=en_US" "Migration and DVD/CD
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-5623.20081016.mju2Q/MigrationDVDCDSharingUp.dmg"
 
-tgrdltxt "https://support.apple.com/kb/dl838?locale=en_US" "QuickTime"
+tgrdltxt "https://support.apple.com/kb/dl838?locale=en_US" "QuickTime.html"
 
 tgrdlbin "https://secure-appldnld.apple.com/QuickTime/061-6742.20090909.TgQt4/QuickTime764_Tiger.dmg"
 
-tgrdltxt "https://support.apple.com/kb/DL931?locale=en_US" "Security Update 2009-005 (PowerPC)"
+tgrdltxt "https://support.apple.com/kb/DL931?locale=en_US" "Security Update 2009-005 (PowerPC).html"
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-7100.20090910.Scdfr/SecUpd2009-005PPC.dmg"
 

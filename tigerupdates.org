@@ -1,5 +1,5 @@
 #+title: Mac OS X 10.4 Tiger Software Updates
-#+property: header-args :tangle tigerupdates.sh :eval no :comments no :shebang
+#+property: header-args :tangle tigerupdates.sh :eval no :comments no :shebang "#!/usr/bin/env bash" :tangle-mode (identity #o755)
 
 * Introduction
 :PROPERTIES:
@@ -13,10 +13,6 @@ Download all of the Mac OS X 10.4 Tiger Software Updates updates at once in orde
 You can:
 - Copy paste the steps one by one (Recommended)
 - Run the entire (Bash) script ~tigerupdates.sh~
-  #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_40C19F48-F1A4-451D-92A9-F6AE0608ABE8
-  #+BEGIN_SRC sh
-#!/usr/bin/env bash
-  #+END_SRC
 
 This was written with:
 - macOS Big Sur Version 11
