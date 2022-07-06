@@ -109,21 +109,21 @@ tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/tigerupdat
 tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/tigerupdates.sh" "tigerupdates.sh"
 #+end_src
 
-* Downloads
+* Software Update Downloads Rounds
 :PROPERTIES:
 :ID:       org_grant_2022-07-03T23-41-50-05-00_donutron:60D951B6-CC31-4961-98A7-A7282F44E70C
 :END:
 
 Each download contains two parts:
-- The HTML web page about the update
+- The HTML web page about the Software Update
   - Contains
-    - Update Overview
+    - Software Update Overview
     - Checksum
     - Reading them helps you respect and enjoy your Tiger experience
   - Gets renamed to ~[the page title].html~ because the URL contains no filename.
-- The Binary update file
+- The Binary Software Update file
 
-When you manually run the software updates they proceed in rounds each run including additional updates. The following goes step by step for each round.
+When you manually run the Software Updates they proceed in rounds each run including additional updates. The following goes step by step for each round.
 
 Steps copied from [[https://tinyapps.org/docs/tiger-on-m1.html][here]].
 
@@ -189,29 +189,32 @@ mkdir 02
 cd 02
 #+END_SRC
 
-[[https://support.apple.com/kb/dl304?locale=en_US][X11 Update 2006]] | Version: 1.1.3
-
-#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_92042180-3F86-4211-80D3-8600F3A136D6
-#+BEGIN_SRC sh
-tgrdltxt "https://support.apple.com/kb/dl304?locale=en_US" "X11 Update 2006.html"
-
-tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2901.20061113.iUnrq/X11Update2006.dmg"
-#+END_SRC
-
 [[https://support.apple.com/kb/DL713?locale=en_US][Migration and DVD/CD Sharing Update]] | Version: 1.1
+
+This page links to [[https://web.archive.org/web/20141115055144/https://support.apple.com/en-us/HT3174][About the Migration and DVD/CD Sharing Update]].
+
+*WARNING*: Apple did not provide an ~SHA1~ for this Software Update on either page.
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_27F92313-0879-425C-8F8F-4B7D0789FF7E
 #+BEGIN_SRC sh
 tgrdltxt "https://support.apple.com/kb/DL713?locale=en_US" "Migration and DVD-CD Sharing Update.html"
+
+tgrdltxt "https://web.archive.org/web/20141115055144/https://support.apple.com/en-us/HT3174" "About the Migration and DVD-CD Sharing Update.html"
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-5623.20081016.mju2Q/MigrationDVDCDSharingUp.dmg"
 #+END_SRC
 
 [[https://support.apple.com/kb/dl838?locale=en_US][QuickTime]] | Version: 7.6.4
 
+This page links to [[https://support.apple.com/en-us/HT201941][About QuickTime 7.6.4]].
+
+*WARNING*: Apple did not provide an ~SHA1~ for this Software Update on either page.
+
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_F22C2F4E-B97C-46E6-85BE-5E6B33DBA96B
 #+BEGIN_SRC sh
 tgrdltxt "https://support.apple.com/kb/dl838?locale=en_US" "QuickTime.html"
+
+tgrdltxt "https://support.apple.com/en-us/HT201941" "About QuickTime 7.6.4"
 
 tgrdlbin "https://secure-appldnld.apple.com/QuickTime/061-6742.20090909.TgQt4/QuickTime764_Tiger.dmg"
 #+END_SRC
@@ -223,6 +226,17 @@ tgrdlbin "https://secure-appldnld.apple.com/QuickTime/061-6742.20090909.TgQt4/Qu
 tgrdltxt "https://support.apple.com/kb/DL931?locale=en_US" "Security Update 2009-005 (PowerPC).html"
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-7100.20090910.Scdfr/SecUpd2009-005PPC.dmg"
+#+END_SRC
+
+[[https://support.apple.com/kb/dl304?locale=en_US][X11 Update 2006]] | Version: 1.1.3
+
+*WARNING*: Apple did not provide an ~SHA1~ for this Software Update.
+
+#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_92042180-3F86-4211-80D3-8600F3A136D6
+#+BEGIN_SRC sh
+tgrdltxt "https://support.apple.com/kb/dl304?locale=en_US" "X11 Update 2006.html"
+
+tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2901.20061113.iUnrq/X11Update2006.dmg"
 #+END_SRC
 
 Exit
@@ -256,6 +270,8 @@ tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2243.20060417.JvpPc/J2SE5
 
 [[https://web.archive.org/web/20130616225610/http://support.apple.com/kb/dl1069][Safari]] | Version: 4.1.3
 
+*WARNING*: The ~SHA1~ checksum of the downloaded file does not match with the checksum listed on the web page!
+
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_B26742C5-C3AE-4B9A-8500-D7F2FB3559AA
 #+BEGIN_SRC sh
 tgrdltxt "https://web.archive.org/web/20130616225610/http://support.apple.com/kb/dl1069" "Safari.html"
@@ -275,7 +291,7 @@ cd "$TGRSRC"
 :ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:CA1FA509-485E-4479-BFE0-9CB9AE347904
 :END:
 
-AKA "Java Updates".
+AKA "Java Software Update".
 
 "The Network is the Computer": [[https://en.wikipedia.org/wiki/Sun_Microsystems][Sun]] we miss you!
 
@@ -289,6 +305,10 @@ cd 04
 
 [[https://support.apple.com/kb/dl281?locale=en_US][Java for Mac OS X 10.4, Release 5]]
 
+This page links to [[http://support.apple.com/kb/HT1523][About Java for Mac OS X 10.4, Release 5]]. It is no longer available. It isn't available on the [[https://web.archive.org/web/*/https://support.apple.com/en-us/HT1523][Wayback Machine]] either.
+
+*WARNING*: Apple did not provide an ~SHA1~ for this Software Update.
+
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_B64C035C-C48F-4D20-9851-028051118218
 #+BEGIN_SRC sh
 tgrdltxt "https://support.apple.com/kb/dl281?locale=en_US" "Java for Mac OS X 10.4, Release 5.html"
@@ -298,6 +318,8 @@ tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2829.20070215.Tj5Up/JavaF
 
 [[https://support.apple.com/kb/dl152?locale=en_US][Java for Mac OS X 10.4, Release 6]]
 
+*WARNING*: Apple did not provide an ~SHA1~ for this Software Update.
+
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_05D6B582-4746-4BD8-932D-C2000C5206D4
 #+BEGIN_SRC sh
 tgrdltxt "https://support.apple.com/kb/dl152?locale=en_US" "Java for Mac OS X 10.4, Release 6.html"
@@ -306,6 +328,8 @@ tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-4073.20071213.b64Us/JavaF
 #+END_SRC
 
 [[https://support.apple.com/kb/DL699?locale=en_US][Java for Mac OS X 10.4, Release 7]]
+
+*WARNING*: Apple did not provide an ~SHA1~ for this Software Update.
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_5320C890-0206-407B-8282-57781BBD2B0C
 #+BEGIN_SRC sh
@@ -320,6 +344,8 @@ tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-4472.20080918.l9a3n/JavaF
 #+BEGIN_SRC sh
 tgrdltxt "https://support.apple.com/kb/DL776?locale=en_US" "Java for Mac OS X 10.4, Release 8.html"
 
+tgrdltxt "https://support.apple.com/en-us/HT3373" "About Java for Mac OS X 10.4, Release 8"
+
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-5909.20090212.wqErt/JavaForMacOSX10.4Release8.dmg"
 #+END_SRC
 
@@ -328,6 +354,8 @@ tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-5909.20090212.wqErt/JavaF
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_E22EAB2E-136C-4108-8193-435A1E23F9D2
 #+BEGIN_SRC sh
 tgrdltxt "https://support.apple.com/kb/dl847?locale=en_US" "Java for Mac OS X 10.4, Release 9.html"
+
+tgrdltxt "https://support.apple.com/en-us/HT3593" "About Java for Mac OS X v10.4, Release 9"
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-6614.20090615.jVa9r/JavaForMacOSX10.4Release9.dmg"
 #+END_SRC
@@ -338,21 +366,6 @@ Exit
 #+BEGIN_SRC sh
 cd "$TGRSRC"
 #+END_SRC
-
-** Checksum HOWTO
-:PROPERTIES:
-:ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:B3D6EF8D-5014-4D36-9F61-8D3CD73B8EF0
-:END:
-
-Apple's page on how to verify SHA-1 checksums:
-
-#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_B22EE2AD-A321-48B1-99C2-C733661355B4
-#+begin_src sh
-cd "$TGRSRC"
-tgrdltxt "https://web.archive.org/web/20141111085423/https://support.apple.com/en-us/HT201259" "Mac OS X: How to verify a SHA-1 digest.html"
-#+end_src
-
-They get verified at the end.
 
 * Disk Image
 :PROPERTIES:
@@ -382,7 +395,7 @@ tgrmkdmg "$TGRSRC"
 
 There are two steps to verifying these files:
 - The DMG file itself
-- The software update files
+- The Software Update files
 
 ** DMG
 :PROPERTIES:
@@ -403,7 +416,7 @@ Verify it:
 hdiutil verify "tigerupdates.dmg"
 #+END_SRC
 
-You should see something like this:
+You should see this verbatim
 
 #+begin_export ascii
 verified   CRC32 $5C30E434
@@ -419,9 +432,136 @@ hdiutil attach "tigerupdates.dmg"
 
 Check up above with the /Verify it/ code block. If this reports VALID than you can trust that the DMG was not modified since its creation. However the individual update files still need to be validated.
 
-** Update Files
+** SHA1 Checksum HOWTO
+:PROPERTIES:
+:ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:B3D6EF8D-5014-4D36-9F61-8D3CD73B8EF0
+:END:
+
+Before verifying the Software Updates you need to verify their integrity.
+
+Apple provides [[https://en.wikipedia.org/wiki/SHA-1][SHA-1]] checksums for its Software Updates to do that.
+
+The ~shasum~ defaults to the ~SHA1~ algorithm so if you use a different tool then make sure that you are using the correct algorithm.
+
+Download Apple's page on how to verify SHA-1 checksums:
+
+#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_B22EE2AD-A321-48B1-99C2-C733661355B4
+#+begin_src sh
+cd "$TGRSRC"
+tgrdltxt "https://web.archive.org/web/20141111085423/https://support.apple.com/en-us/HT201259" "Mac OS X: How to verify a SHA-1 digest.html"
+#+end_src
+
+Each update file's documentation page includes a SHA1 checksum to verify the file with. Here is a [[https://web.archive.org/web/20141111085423/https://support.apple.com/en-us/HT201259][cached link of "How to verify a SHA-1 digest"]]. TL;DR generate the checksum by hand for every Software Update and visually compare it to the checksum on the web page. For the sake of valuing your time and mine I'll copy the checksums into a file so we can verify them automatically.
+
+Usually the checksums are provided in a format that makes it easy to automatically verify. However they are not done so here. Instead they are listed in a web page. That is fine because I'll copy them into a file adhering to the [[https://www.gnu.org/software/coreutils/manual/coreutils.html#md5sum-invocation][standard format]].
+
+For each Software Update Download Round you'll find a file named like this ~<ROUND-##.SHA1>~ in that folder. It will look something like this: for each file there is a single line with a hash for that file and then an two spaces and then ~filename. You can test this now with the test file included in the DMG.
+
+The test file is named ~sha1test.org~.
+
+The checksum file is named ~sha1test.sha1~. I created it and put it in here.
+
+Download them and verify it:
+
+#+NAME: org_grant_2022-07-06T12-27-31-05-00_donutron_E346E8CB-1921-4607-86B3-6CD0FE43AD1E
+#+begin_src sh
+cd "$TGRSRC"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/tigerupdates.org" "sha1test.org"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/tigerupdates.org" "sha1test.sha1"
+shasum --check sha1test.sha1
+#+end_src
+You should see this verbatim
+
+#+begin_export ascii
+sha1test.org: OK
+#+end_export
+
+Now you can proceed to verifying the downloads.
+
+** Software Update Files
 :PROPERTIES:
 :ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:FE4E16BC-2C28-4AC5-AC76-079E96EB1D33
 :END:
 
-Each update file's documentation page includes a SHA1 checksum to verify the file with. Here is a [[https://web.archive.org/web/20141111085423/https://support.apple.com/en-us/HT201259][cached link of "How to verify a SHA-1 digest"]] and there is also a file downloaded in the DMG itself.
+Enter every round's directory download and verify checksums.
+
+Slowly review the results to make sure that
+- Every file is listed
+- They are reported ~OK~
+- If they are *not reported OK* then there is an explanation why. There was checksum provided for some of the downloads: details are noted in each found.
+
+#+NAME: org_grant_2022-07-06T12-27-31-05-00_donutron_AF0AF708-7C32-46E8-A1D7-401F66690666
+#+begin_src sh
+cd "$TGRSRC"
+cd 01
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-01.sha1" "ROUND-01.sha1"
+shasum --check ROUND-01.SHA1
+tgrslp 10
+cd ..
+#+end_src
+
+You should see this verbatim
+
+#+begin_export ascii
+Java131and142Release2.dmg: OK
+MacOSXUpdCombo10.4.11PPC.dmg: OK
+#+end_export
+
+#+name: org_grant_2022-07-06T12-27-31-05-00_donutron_4F4F1513-7213-43DA-BA1B-BAADDFEF3181
+#+begin_src sh
+cd 02
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-02.sha1" "ROUND-02.sha1"
+shasum --check ROUND-02.SHA1
+tgrslp 10
+cd ..
+#+end_src
+
+You should see this verbatim
+
+#+begin_export ascii
+SecUpd2009-005PPC.dmg: OK
+#+end_export
+
+#+name: org_grant_2022-07-06T12-27-31-05-00_donutron_0464C8F5-8137-4770-BB13-08A090D07590
+#+begin_src sh
+cd 03
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-03.sha1" "ROUND-03.sha1"
+shasum --check ROUND-03.SHA1
+tgrslp 10
+cd ..
+#+end_src
+
+You should see this verbatim
+
+#+begin_export ascii
+J2SE50Release4.dmg: OK
+Safari4.1.3Tiger.dmg: FAILED
+shasum: WARNING: 1 computed checksum did NOT match
+#+end_export
+
+#+name: org_grant_2022-07-06T12-27-31-05-00_donutron_8681BF0C-906C-429F-BB81-C67D48CB5A8C
+#+begin_src sh
+cd 04
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-04.sha1" "ROUND-04.sha1"
+shasum --check ROUND-04.SHA1
+tgrslp 10
+cd ..
+#+end_src
+
+You should see this verbatim
+
+#+begin_export ascii
+JavaForMacOSX10.4Release8.dmg: OK
+JavaForMacOSX10.4Release9.dmg: OK
+#+end_export
+
+* Conclusion
+:PROPERTIES:
+:ID:       org_grant_2022-07-06T12-27-31-05-00_donutron:CF8E627C-0AF5-4A6F-9F0F-709D388C5BE4
+:END:
+
+Now you've got everything you need to catch up your Tiger box.
+
+Tiger is beloved Mac OS X release: hopefully you are having a lot of fun with it.
+
+Please submit improvements to this document when you have a chance!

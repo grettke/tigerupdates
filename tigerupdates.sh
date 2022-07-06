@@ -62,21 +62,25 @@ cd "$TGRSRC"
 mkdir 02
 cd 02
 
-tgrdltxt "https://support.apple.com/kb/dl304?locale=en_US" "X11 Update 2006.html"
-
-tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2901.20061113.iUnrq/X11Update2006.dmg"
-
 tgrdltxt "https://support.apple.com/kb/DL713?locale=en_US" "Migration and DVD-CD Sharing Update.html"
+
+tgrdltxt "https://web.archive.org/web/20141115055144/https://support.apple.com/en-us/HT3174" "About the Migration and DVD-CD Sharing Update.html"
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-5623.20081016.mju2Q/MigrationDVDCDSharingUp.dmg"
 
 tgrdltxt "https://support.apple.com/kb/dl838?locale=en_US" "QuickTime.html"
+
+tgrdltxt "https://support.apple.com/en-us/HT201941" "About QuickTime 7.6.4"
 
 tgrdlbin "https://secure-appldnld.apple.com/QuickTime/061-6742.20090909.TgQt4/QuickTime764_Tiger.dmg"
 
 tgrdltxt "https://support.apple.com/kb/DL931?locale=en_US" "Security Update 2009-005 (PowerPC).html"
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-7100.20090910.Scdfr/SecUpd2009-005PPC.dmg"
+
+tgrdltxt "https://support.apple.com/kb/dl304?locale=en_US" "X11 Update 2006.html"
+
+tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2901.20061113.iUnrq/X11Update2006.dmg"
 
 cd "$TGRSRC"
 
@@ -110,16 +114,17 @@ tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-4472.20080918.l9a3n/JavaF
 
 tgrdltxt "https://support.apple.com/kb/DL776?locale=en_US" "Java for Mac OS X 10.4, Release 8.html"
 
+tgrdltxt "https://support.apple.com/en-us/HT3373" "About Java for Mac OS X 10.4, Release 8"
+
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-5909.20090212.wqErt/JavaForMacOSX10.4Release8.dmg"
 
 tgrdltxt "https://support.apple.com/kb/dl847?locale=en_US" "Java for Mac OS X 10.4, Release 9.html"
 
+tgrdltxt "https://support.apple.com/en-us/HT3593" "About Java for Mac OS X v10.4, Release 9"
+
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-6614.20090615.jVa9r/JavaForMacOSX10.4Release9.dmg"
 
 cd "$TGRSRC"
-
-cd "$TGRSRC"
-tgrdltxt "https://web.archive.org/web/20141111085423/https://support.apple.com/en-us/HT201259" "Mac OS X: How to verify a SHA-1 digest.html"
 
 open "$TGRDST"
 
@@ -129,3 +134,36 @@ tgrmkdmg "$TGRSRC"
 hdiutil verify "tigerupdates.dmg"
 
 hdiutil attach "tigerupdates.dmg"
+
+cd "$TGRSRC"
+tgrdltxt "https://web.archive.org/web/20141111085423/https://support.apple.com/en-us/HT201259" "Mac OS X: How to verify a SHA-1 digest.html"
+
+cd "$TGRSRC"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/tigerupdates.org" "sha1test.org"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/tigerupdates.org" "sha1test.sha1"
+shasum --check sha1test.sha1
+
+cd "$TGRSRC"
+cd 01
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-01.sha1" "ROUND-01.sha1"
+shasum --check ROUND-01.SHA1
+tgrslp 10
+cd ..
+
+cd 02
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-02.sha1" "ROUND-02.sha1"
+shasum --check ROUND-02.SHA1
+tgrslp 10
+cd ..
+
+cd 03
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-03.sha1" "ROUND-03.sha1"
+shasum --check ROUND-03.SHA1
+tgrslp 10
+cd ..
+
+cd 04
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-04.sha1" "ROUND-04.sha1"
+shasum --check ROUND-04.SHA1
+tgrslp 10
+cd ..
