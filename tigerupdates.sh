@@ -2,7 +2,7 @@
 function tgrdltxt {
   printf "Attempting to download:\n'%s'\n" "$1"
   printf "to:\n"
-  printf "'%s'" "$2"
+  printf "'%s'\n" "$2"
   curl "$1" --limit-rate "1M" --progress-bar --styled-output --output "$2"
   printf "Sleeping 5 seconds.\n"
   sleep 5
@@ -38,6 +38,10 @@ rm -rf "$TGRDST"
 
 mkdir "$TGRSRC"
 mkdir "$TGRDST"
+
+cd "$TGRSRC"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/tigerupdates.org" "tigerupdates.org"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/tigerupdates.sh" "tigerupdates.sh"
 
 cd "$TGRSRC"
 

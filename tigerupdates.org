@@ -30,7 +30,7 @@ Download the Software Updates web pages in text mode and updates in binary mode.
 function tgrdltxt {
   printf "Attempting to download:\n'%s'\n" "$1"
   printf "to:\n"
-  printf "'%s'" "$2"
+  printf "'%s'\n" "$2"
   curl "$1" --limit-rate "1M" --progress-bar --styled-output --output "$2"
   printf "Sleeping 5 seconds.\n"
   sleep 5
@@ -91,6 +91,22 @@ rm -rf "$TGRDST"
 mkdir "$TGRSRC"
 mkdir "$TGRDST"
 #+END_SRC
+
+* This Script
+:PROPERTIES:
+:ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:CFD1122E-C523-4ED8-B962-DD246965B1D3
+:END:
+
+Include this document and its script in the creation of the DMG:
+
+it explains everything.
+
+#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_D9151F07-1F26-4F60-91AC-3FF5FE89E4BE
+#+begin_src sh
+cd "$TGRSRC"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/tigerupdates.org" "tigerupdates.org"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/tigerupdates.sh" "tigerupdates.sh"
+#+end_src
 
 * Downloads
 :PROPERTIES:
