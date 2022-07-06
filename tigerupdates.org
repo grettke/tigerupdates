@@ -1,0 +1,190 @@
+#+title: Mac OS X 10.4 Tiger Software Updates
+#+property: header-args :tangle tigerupdates.sh :eval no :comments yes :shebang
+
+* Introduction
+:PROPERTIES:
+:ID:       org_grant_2022-07-03T23-41-50-05-00_donutron:D98B6AD6-64BC-48BD-A5CE-AD74BF73488B
+:END:
+
+Download all of the Mac OS X 10.4 Tiger Software Updates updates at once in order to:
+- Safely archive them in case they every disappear
+- Create a DMG with them for setting up new boxes
+
+You can:
+- Copy paste the steps one by one (Recommended)
+- Run the entire (Bash) script ~tigerupdates.sh~
+
+This was written with:
+- macOS Big Sur Version 11
+- Xcode Command Line Tools
+
+* Utility Functions
+:PROPERTIES:
+:ID:       org_grant_2022-07-03T23-41-50-05-00_donutron:4F213586-C49C-402D-BCF5-B5680205D39C
+:END:
+
+Download the Software Updates web pages in text mode and updates in binary mode. Be gentle with the servers and wait between downloads.
+
+#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_7C3C14BA-36E2-4C56-8D00-09B9EAB9D148
+#+begin_src sh
+function tgrdltxt {
+  curl "$1" --limit-rate "1M" --progress-bar --styled-output --output "$2"
+  printf "Sleeping 5 seconds.\n"
+  sleep 5
+  printf "Done sleeping.\n"
+}
+
+function tgrdlbin {
+  curl --remote-name "$1" --limit-rate "1M" --progress-bar --styled-output
+  printf "Sleeping 5 seconds.\n"
+  sleep 5
+  printf "Done sleeping.\n"
+}
+#+end_src
+
+Create the software update read-only disk image:
+
+#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_E12169DB-B584-45B7-8367-AB8330E60DC9
+#+begin_src sh
+function tgrmkdmg {
+  hdiutil create \
+          -srcdir "$1"\
+          -fs "Journaled HFS+" \
+          -format "UDRO" \
+          -volname "Tiger Updates" \
+          -ov \
+          -nocrossdev \
+          -scrub \
+          -atomic \
+          "tigerupdates.dmg"
+}
+#+end_src
+
+* Working Directories
+:PROPERTIES:
+:ID:       org_grant_2022-07-03T23-41-50-05-00_donutron:E72285FE-5557-47EF-B601-FAD52B5325CD
+:END:
+
+This script:
+- Downloads files
+- Packages them into a DMG
+
+You need two directories to accomodate this process so declare them with variables:
+
+#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_8883AB7F-5F2F-4B60-92FD-EF695D867A3F
+#+begin_src sh
+export TGRSRC="/Users/grant/tmp/tigerupdates"
+export TGRDST="/Users/grant/tmp/tigerdmg"
+#+end_src
+
+(Re) Create them
+
+#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_DBFCADD4-1533-4270-AFAA-E8B2C7DB1128
+#+begin_src sh
+rm -rf "$TGRSRC"
+rm -rf "$TGRDST"
+
+mkdir "$TGRSRC"
+mkdir "$TGRDST"
+#+end_src
+
+* Downloads
+:PROPERTIES:
+:ID:       org_grant_2022-07-03T23-41-50-05-00_donutron:60D951B6-CC31-4961-98A7-A7282F44E70C
+:END:
+
+Each download contains two parts:
+- The HTML web page about the update
+  - Contains
+    - Update Overview
+    - Checksum
+  - Is rename to ~[the page title].html~ because the URL contains no filename.
+- The Binary update file
+
+When you manually run the software updates they proceed in rounds each run including additional updates. The following goes step by step for each round.
+
+Steps copied from [[https://tinyapps.org/docs/tiger-on-m1.html][here]].
+
+[[https://tinyapps.org/miles-wolbe.html][Miles Wolbe]]: your efforts are greatly appreciated.
+
+Enter the download directory:
+
+#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_C28E24DA-CDE2-48E9-B42E-7C02A3231DA7
+#+begin_src sh
+cd "$TGRSRC"
+#+end_src
+
+It is less surprising to manually create and enter the directories instead of using [[https://curl.se/][cURL]]'s ~--create-dirs~ parameter.
+
+** Round One
+:PROPERTIES:
+:ID:       org_grant_2022-07-03T23-41-50-05-00_donutron:1C5F1A22-0100-40BA-9305-6078EA354E4E
+:END:
+
+#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_51FF1A44-2F66-4AB7-9722-11F7C2AD1F3F
+#+begin_src sh
+mkdir 01
+cd 01
+#+end_src
+
+[[https://support.apple.com/kb/DL441?locale=en_US][Java 1.3.1 and 1.4.2 Release 2]] | Version: 2.0
+
+#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_B1CA0C4E-A027-4F7D-96DD-31326BED2078
+#+begin_src sh
+tgrdltxt "https://support.apple.com/kb/DL441?locale=en_US" "Java 1.3.1 and 1.4.2 Release 2 | Version: 2.0.html"
+tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2072.20050913.jVTr2/Java131and142Release2.dmg"
+#+end_src
+
+[[https://support.apple.com/kb/dl170?locale=en_US][Mac OS X Update Combined (PowerPC)]] | Version: 10.4.11
+
+#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_DB267147-EBEE-4736-8038-2DD45BCF4689
+#+begin_src sh
+tgrdltxt "https://support.apple.com/kb/dl170?locale=en_US" "Mac OS X 10.4.11 Combo Update (PPC)"
+tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-3461.20071114.8Uy45/MacOSXUpdCombo10.4.11PPC.dmg"
+#+end_src
+
+#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_B9DD0E13-A1C0-4489-85D9-AAB07FDE7604
+#+begin_src sh
+cd "$TGRSRC"
+#+end_src
+
+* Disk Image
+:PROPERTIES:
+:ID:       org_grant_2022-07-03T23-41-50-05-00_donutron:56835D75-DD95-4A3D-9FEA-7B9C46EBA3ED
+:END:
+
+Open the DMG directory:
+
+#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_6C089E9B-5709-4E75-B1F7-93F24510FA18
+#+begin_src sh
+open "$TGRDST"
+#+end_src
+
+Create it overwriting when it already exists:
+
+#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_39D17A7C-F94A-491C-8C00-1D8591D547F1
+#+begin_src sh
+cd "$TGRDST"
+tgrmkdmg "$TGRSRC"
+#+end_src
+
+Verify it:
+
+#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_B07F222C-9C03-4F59-9B01-F67CAE8E3DC6
+#+begin_src sh
+hdiutil verify "tigerupdates.dmg"
+#+end_src
+
+You should see something like this:
+
+#+begin_export ascii
+verified   CRC32 $5C30E434
+hdiutil: verify: checksum of "tigerupdates.dmg" is VALID
+#+end_export
+
+Mount it just to have a look at it:
+
+#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_4E24DA9D-2E62-45CE-B9F7-4AD81CC6678F
+#+begin_src sh
+hdiutil attach "tigerupdates.dmg"
+#+end_src
