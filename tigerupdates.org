@@ -1,6 +1,10 @@
 #+title: Mac OS X 10.4 Tiger Software Updates
 #+property: header-args :tangle tigerupdates.sh :eval no :comments no :shebang "#!/usr/bin/env bash" :tangle-mode (identity #o755)
 
+* TL;DR
+
+Auto Download & Verify Official Mac OS X 10.4 Tiger Updates While They Still Last!
+
 * Introduction
 :PROPERTIES:
 :ID:       org_grant_2022-07-03T23-41-50-05-00_donutron:D98B6AD6-64BC-48BD-A5CE-AD74BF73488B
