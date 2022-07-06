@@ -3,7 +3,7 @@
 
 * TL;DR
 
-Auto Download & Verify Official Mac OS X 10.4 Tiger Updates While They Still Last!
+Auto Download & Verify Your Official Mac OS X 10.4 Tiger Updates While They Still Last!
 
 * Introduction
 :PROPERTIES:
