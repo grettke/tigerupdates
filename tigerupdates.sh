@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 function tgrdltxt {
+  printf "Attempting to download:\n'%s'\n" "$1"
+  printf "to:\n"
+  printf "'%s'" "$2"
   curl "$1" --limit-rate "1M" --progress-bar --styled-output --output "$2"
   printf "Sleeping 5 seconds.\n"
   sleep 5
@@ -7,6 +10,7 @@ function tgrdltxt {
 }
 
 function tgrdlbin {
+  printf "Attempting to download:\n '%s'\n" "$1"
   curl --remote-name "$1" --limit-rate "1M" --progress-bar --styled-output
   printf "Sleeping 5 seconds.\n"
   sleep 5
