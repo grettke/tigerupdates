@@ -1,5 +1,5 @@
 #+title: Mac OS X 10.4 Tiger Software Updates
-#+property: header-args :tangle tigerupdates.sh :eval no :comments yes :shebang
+#+property: header-args :tangle tigerupdates.sh :eval no :comments no :shebang
 
 * Introduction
 :PROPERTIES:
@@ -13,6 +13,10 @@ Download all of the Mac OS X 10.4 Tiger Software Updates updates at once in orde
 You can:
 - Copy paste the steps one by one (Recommended)
 - Run the entire (Bash) script ~tigerupdates.sh~
+  #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_40C19F48-F1A4-451D-92A9-F6AE0608ABE8
+  #+BEGIN_SRC sh
+#!/usr/bin/env bash
+  #+END_SRC
 
 This was written with:
 - macOS Big Sur Version 11
@@ -26,7 +30,7 @@ This was written with:
 Download the Software Updates web pages in text mode and updates in binary mode. Be gentle with the servers and wait between downloads.
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_7C3C14BA-36E2-4C56-8D00-09B9EAB9D148
-#+begin_src sh
+#+BEGIN_SRC sh
 function tgrdltxt {
   curl "$1" --limit-rate "1M" --progress-bar --styled-output --output "$2"
   printf "Sleeping 5 seconds.\n"
@@ -40,12 +44,12 @@ function tgrdlbin {
   sleep 5
   printf "Done sleeping.\n"
 }
-#+end_src
+#+END_SRC
 
 Create the software update read-only disk image:
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_E12169DB-B584-45B7-8367-AB8330E60DC9
-#+begin_src sh
+#+BEGIN_SRC sh
 function tgrmkdmg {
   hdiutil create \
           -srcdir "$1"\
@@ -58,7 +62,7 @@ function tgrmkdmg {
           -atomic \
           "tigerupdates.dmg"
 }
-#+end_src
+#+END_SRC
 
 * Working Directories
 :PROPERTIES:
@@ -69,24 +73,24 @@ This script:
 - Downloads files
 - Packages them into a DMG
 
-You need two directories to accomodate this process so declare them with variables:
+You need two directories to accomodate  this process so declare them with variables customized for your box:
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_8883AB7F-5F2F-4B60-92FD-EF695D867A3F
-#+begin_src sh
+#+BEGIN_SRC sh
 export TGRSRC="/Users/grant/tmp/tigerupdates"
 export TGRDST="/Users/grant/tmp/tigerdmg"
-#+end_src
+#+END_SRC
 
 (Re) Create them
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_DBFCADD4-1533-4270-AFAA-E8B2C7DB1128
-#+begin_src sh
+#+BEGIN_SRC sh
 rm -rf "$TGRSRC"
 rm -rf "$TGRDST"
 
 mkdir "$TGRSRC"
 mkdir "$TGRDST"
-#+end_src
+#+END_SRC
 
 * Downloads
 :PROPERTIES:
@@ -99,7 +103,7 @@ Each download contains two parts:
     - Update Overview
     - Checksum
     - Reading them helps you respect and enjoy your Tiger experience
-  - Is rename to ~[the page title].html~ because the URL contains no filename.
+  - Gets renamed to ~[the page title].html~ because the URL contains no filename.
 - The Binary update file
 
 When you manually run the software updates they proceed in rounds each run including additional updates. The following goes step by step for each round.
@@ -111,9 +115,9 @@ Steps copied from [[https://tinyapps.org/docs/tiger-on-m1.html][here]].
 Enter the download directory:
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_C28E24DA-CDE2-48E9-B42E-7C02A3231DA7
-#+begin_src sh
+#+BEGIN_SRC sh
 cd "$TGRSRC"
-#+end_src
+#+END_SRC
 
 It is less surprising to manually create and enter the directories instead of using [[https://curl.se/][cURL]]'s ~--create-dirs~ parameter.
 
@@ -125,35 +129,35 @@ It is less surprising to manually create and enter the directories instead of us
 Enter
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_51FF1A44-2F66-4AB7-9722-11F7C2AD1F3F
-#+begin_src sh
+#+BEGIN_SRC sh
 mkdir 01
 cd 01
-#+end_src
+#+END_SRC
 
 [[https://support.apple.com/kb/DL441?locale=en_US][Java 1.3.1 and 1.4.2 Release 2]] | Version: 2.0
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_B1CA0C4E-A027-4F7D-96DD-31326BED2078
-#+begin_src sh
+#+BEGIN_SRC sh
 tgrdltxt "https://support.apple.com/kb/DL441?locale=en_US" "Java 1.3.1 and 1.4.2 Release 2 | Version: 2.0.html"
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2072.20050913.jVTr2/Java131and142Release2.dmg"
-#+end_src
+#+END_SRC
 
 [[https://support.apple.com/kb/dl170?locale=en_US][Mac OS X Update Combined (PowerPC)]] | Version: 10.4.11
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_DB267147-EBEE-4736-8038-2DD45BCF4689
-#+begin_src sh
-tgrdltxt "https://support.apple.com/kb/dl170?locale=en_US" "Mac OS X 10.4.11 Combo Update (PPC)"
+#+BEGIN_SRC sh
+tgrdltxt "https://support.apple.com/kb/dl170?locale=en_US" "Mac OS X 10.4.11 Combo Update (PPC).html"
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-3461.20071114.8Uy45/MacOSXUpdCombo10.4.11PPC.dmg"
-#+end_src
+#+END_SRC
 
 Exit
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_B9DD0E13-A1C0-4489-85D9-AAB07FDE7604
-#+begin_src sh
+#+BEGIN_SRC sh
 cd "$TGRSRC"
-#+end_src
+#+END_SRC
 
 ** Round Two
 :PROPERTIES:
@@ -163,53 +167,53 @@ cd "$TGRSRC"
 Enter
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_95AD38F8-9C9A-4C2B-AED4-8D111247BEFE
-#+begin_src sh
+#+BEGIN_SRC sh
 mkdir 02
 cd 02
-#+end_src
+#+END_SRC
 
 [[https://support.apple.com/kb/dl304?locale=en_US][X11 Update 2006]] | Version: 1.1.3
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_92042180-3F86-4211-80D3-8600F3A136D6
-#+begin_src sh
+#+BEGIN_SRC sh
 tgrdltxt "https://support.apple.com/kb/dl304?locale=en_US" "X11 Update 2006.html"
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2901.20061113.iUnrq/X11Update2006.dmg"
-#+end_src
+#+END_SRC
 
 [[https://support.apple.com/kb/DL713?locale=en_US][Migration and DVD/CD Sharing Update]] | Version: 1.1
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_27F92313-0879-425C-8F8F-4B7D0789FF7E
-#+begin_src sh
+#+BEGIN_SRC sh
 tgrdltxt "https://support.apple.com/kb/DL713?locale=en_US" "Migration and DVD/CD Sharing Update.html"
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-5623.20081016.mju2Q/MigrationDVDCDSharingUp.dmg"
-#+end_src
+#+END_SRC
 
 [[https://support.apple.com/kb/dl838?locale=en_US][QuickTime]] | Version: 7.6.4
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_F22C2F4E-B97C-46E6-85BE-5E6B33DBA96B
-#+begin_src sh
-tgrdltxt "https://support.apple.com/kb/dl838?locale=en_US" "QuickTime"
+#+BEGIN_SRC sh
+tgrdltxt "https://support.apple.com/kb/dl838?locale=en_US" "QuickTime.html"
 
 tgrdlbin "https://secure-appldnld.apple.com/QuickTime/061-6742.20090909.TgQt4/QuickTime764_Tiger.dmg"
-#+end_src
+#+END_SRC
 
 [[https://support.apple.com/kb/DL931?locale=en_US][Security Update 2009-005 (PowerPC)]] | Version: 1.0
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_4870AD67-D534-4B6B-89AF-8059319C3D40
-#+begin_src sh
-tgrdltxt "https://support.apple.com/kb/DL931?locale=en_US" "Security Update 2009-005 (PowerPC)"
+#+BEGIN_SRC sh
+tgrdltxt "https://support.apple.com/kb/DL931?locale=en_US" "Security Update 2009-005 (PowerPC).html"
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-7100.20090910.Scdfr/SecUpd2009-005PPC.dmg"
-#+end_src
+#+END_SRC
 
 Exit
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_B9DD0E13-A1C0-4489-85D9-AAB07FDE7604
-#+begin_src sh
+#+BEGIN_SRC sh
 cd "$TGRSRC"
-#+end_src
+#+END_SRC
 
 ** Round Three
 :PROPERTIES:
@@ -219,37 +223,37 @@ cd "$TGRSRC"
 Enter
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_97A238EF-F8CA-46D7-B557-20A793056DEF
-#+begin_src sh
+#+BEGIN_SRC sh
 mkdir 03
 cd 03
-#+end_src
+#+END_SRC
 
-asdf
+[[https://support.apple.com/kb/DL380?locale=en_US][J2SE 5.0 Release 4]] | Version: 4.0
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_F5208760-7B5E-4315-90E1-E987BD4D7EDE
-#+begin_src sh
-tgrdltxt "" ".html"
+#+BEGIN_SRC sh
+tgrdltxt "https://support.apple.com/kb/DL380?locale=en_US" "J2SE 5.0 Release 4.html"
 
-tgrdlbin ""
-#+end_src
+tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2243.20060417.JvpPc/J2SE50Release4.dmg"
+#+END_SRC
 
-sadf
+[[https://web.archive.org/web/20130616225610/http://support.apple.com/kb/dl1069][Safari]] | Version: 4.1.3
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_B26742C5-C3AE-4B9A-8500-D7F2FB3559AA
-#+begin_src sh
-tgrdltxt "" ".html"
+#+BEGIN_SRC sh
+tgrdltxt "https://web.archive.org/web/20130616225610/http://support.apple.com/kb/dl1069" "Safari.html"
 
-tgrdlbin ""
-#+end_src
+tgrdlbin "https://web.archive.org/web/20130616225610/http://appldnld.apple.com/Safari4/061-9485.20101118.Vfr455/Safari4.1.3Tiger.dmg"
+#+END_SRC
 
 Exit
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_B9DD0E13-A1C0-4489-85D9-AAB07FDE7604
-#+begin_src sh
+#+BEGIN_SRC sh
 cd "$TGRSRC"
-#+end_src
+#+END_SRC
 
-** Round Four
+** Round Four-Eight
 :PROPERTIES:
 :ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:CA1FA509-485E-4479-BFE0-9CB9AE347904
 :END:
@@ -261,69 +265,74 @@ AKA "Java Updates".
 Enter
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_14779636-F814-4EDC-9D90-50A0182A2AC8
-#+begin_src sh
+#+BEGIN_SRC sh
 mkdir 04
 cd 04
-#+end_src
+#+END_SRC
 
-5
+[[https://support.apple.com/kb/dl281?locale=en_US][Java for Mac OS X 10.4 Release 5]]
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_B64C035C-C48F-4D20-9851-028051118218
-#+begin_src sh
-tgrdltxt "" ".html"
+#+BEGIN_SRC sh
+tgrdltxt "https://support.apple.com/kb/dl281?locale=en_US" "Java for Mac OS X 10.4 Release 5.html"
 
-tgrdlbin ""
-#+end_src
+tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2829.20070215.Tj5Up/JavaForMacOSX10.4Release5.dmg"
+#+END_SRC
 
-6
+[[https://support.apple.com/kb/dl152?locale=en_US][Java for Mac OS X 10.4, Release 6]]
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_05D6B582-4746-4BD8-932D-C2000C5206D4
-#+begin_src sh
-tgrdltxt "" ".html"
+#+BEGIN_SRC sh
+tgrdltxt "https://support.apple.com/kb/dl152?locale=en_US" "Java for Mac OS X 10.4, Release 6.html"
 
-tgrdlbin ""
+tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-4073.20071213.b64Us/JavaForMacOSX10.4Release6.dmg"
+#+END_SRC
 
-#+end_src
-
-7
+[[https://support.apple.com/kb/DL699?locale=en_US][Java for Mac OS X 10.4, Release 7]]
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_5320C890-0206-407B-8282-57781BBD2B0C
-#+begin_src sh
-tgrdltxt "" ".html"
+#+BEGIN_SRC sh
+tgrdltxt "https://support.apple.com/kb/DL699?locale=en_US" "Java for Mac OS X 10.4, Release 7.html"
 
-tgrdlbin ""
-#+end_src
+tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-4472.20080918.l9a3n/JavaForMacOSX10.4Release7.dmg"
+#+END_SRC
 
-#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_9F1134B6-4CD0-4071-89B8-15381EAC99C6
-#+begin_src sh
-tgrdltxt "" ".html"
-
-tgrdlbin ""
-#+end_src
-
-8
+[[https://support.apple.com/kb/DL776?locale=en_US][Java for Mac OS X 10.4, Release 8]]
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_F61CA741-C1BE-41F1-BF01-34FD3C4F1EA0
-#+begin_src sh
-tgrdltxt "" ".html"
+#+BEGIN_SRC sh
+tgrdltxt "https://support.apple.com/kb/DL776?locale=en_US" "Java for Mac OS X 10.4, Release 8.html"
 
-tgrdlbin ""
-#+end_src
+tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-5909.20090212.wqErt/JavaForMacOSX10.4Release8.dmg"
+#+END_SRC
 
-9
+[[https://support.apple.com/kb/dl847?locale=en_US][Java for Mac OS X 10.4, Release 9]]
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_E22EAB2E-136C-4108-8193-435A1E23F9D2
-#+begin_src sh
-tgrdltxt "" ".html"
+#+BEGIN_SRC sh
+tgrdltxt "https://support.apple.com/kb/dl847?locale=en_US" "Java for Mac OS X 10.4, Release 9.html"
 
-tgrdlbin ""
-#+end_src
+tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-6614.20090615.jVa9r/JavaForMacOSX10.4Release9.dmg"
+#+END_SRC
 
 Exit
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_B9DD0E13-A1C0-4489-85D9-AAB07FDE7604
+#+BEGIN_SRC sh
+cd "$TGRSRC"
+#+END_SRC
+
+** Checksum HOWTO
+:PROPERTIES:
+:ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:B3D6EF8D-5014-4D36-9F61-8D3CD73B8EF0
+:END:
+
+Apple's page on how to verify SHA-1 checksums:
+
+#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_B22EE2AD-A321-48B1-99C2-C733661355B4
 #+begin_src sh
 cd "$TGRSRC"
+tgrdltxt "https://web.archive.org/web/20141111085423/https://support.apple.com/en-us/HT201259" "Mac OS X: How to verify a SHA-1 digest.html"
 #+end_src
 
 * Disk Image
@@ -334,24 +343,24 @@ cd "$TGRSRC"
 Open the DMG directory:
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_6C089E9B-5709-4E75-B1F7-93F24510FA18
-#+begin_src sh
+#+BEGIN_SRC sh
 open "$TGRDST"
-#+end_src
+#+END_SRC
 
 Create it overwriting when it already exists:
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_39D17A7C-F94A-491C-8C00-1D8591D547F1
-#+begin_src sh
+#+BEGIN_SRC sh
 cd "$TGRDST"
 tgrmkdmg "$TGRSRC"
-#+end_src
+#+END_SRC
 
 Verify it:
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_B07F222C-9C03-4F59-9B01-F67CAE8E3DC6
-#+begin_src sh
+#+BEGIN_SRC sh
 hdiutil verify "tigerupdates.dmg"
-#+end_src
+#+END_SRC
 
 You should see something like this:
 
@@ -363,6 +372,33 @@ hdiutil: verify: checksum of "tigerupdates.dmg" is VALID
 Mount it just to have a look at it:
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_4E24DA9D-2E62-45CE-B9F7-4AD81CC6678F
-#+begin_src sh
+#+BEGIN_SRC sh
 hdiutil attach "tigerupdates.dmg"
-#+end_src
+#+END_SRC
+
+* Verification
+:PROPERTIES:
+:ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:C2BBE524-FE7C-41FC-974C-80A9B9B66726
+:END:
+
+There are two steps to verifying these files:
+- The DMG file itself
+- The software update files
+
+** DMG
+:PROPERTIES:
+:ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:131B597E-DC8F-4382-B4E6-CC407B1CCE3F
+:END:
+
+The DMG:
+- Is read-only so theoretically can not be modified after creation (likely can be easily)
+- Has a checksum built in
+
+Check up above with the /Verify it/ code block. If this reports VALID than you can trust that the DMG was not modified since its creation. However the individual update files still need to be validated.
+
+** Update Files
+:PROPERTIES:
+:ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:FE4E16BC-2C28-4AC5-AC76-079E96EB1D33
+:END:
+
+Each update file's documentation page includes a SHA1 checksum to verify the file with. Here is a [[https://web.archive.org/web/20141111085423/https://support.apple.com/en-us/HT201259][cached link of "How to verify a SHA-1 digest"]] and there is also a file downloaded in the DMG itself.
