@@ -98,6 +98,7 @@ Each download contains two parts:
   - Contains
     - Update Overview
     - Checksum
+    - Reading them helps you respect and enjoy your Tiger experience
   - Is rename to ~[the page title].html~ because the URL contains no filename.
 - The Binary update file
 
@@ -121,6 +122,8 @@ It is less surprising to manually create and enter the directories instead of us
 :ID:       org_grant_2022-07-03T23-41-50-05-00_donutron:1C5F1A22-0100-40BA-9305-6078EA354E4E
 :END:
 
+Enter
+
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_51FF1A44-2F66-4AB7-9722-11F7C2AD1F3F
 #+begin_src sh
 mkdir 01
@@ -132,6 +135,7 @@ cd 01
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_B1CA0C4E-A027-4F7D-96DD-31326BED2078
 #+begin_src sh
 tgrdltxt "https://support.apple.com/kb/DL441?locale=en_US" "Java 1.3.1 and 1.4.2 Release 2 | Version: 2.0.html"
+
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2072.20050913.jVTr2/Java131and142Release2.dmg"
 #+end_src
 
@@ -140,8 +144,182 @@ tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2072.20050913.jVTr2/Java1
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_DB267147-EBEE-4736-8038-2DD45BCF4689
 #+begin_src sh
 tgrdltxt "https://support.apple.com/kb/dl170?locale=en_US" "Mac OS X 10.4.11 Combo Update (PPC)"
+
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-3461.20071114.8Uy45/MacOSXUpdCombo10.4.11PPC.dmg"
 #+end_src
+
+Exit
+
+#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_B9DD0E13-A1C0-4489-85D9-AAB07FDE7604
+#+begin_src sh
+cd "$TGRSRC"
+#+end_src
+
+** Round Two
+:PROPERTIES:
+:ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:C3DA226A-C596-4C75-86DC-07F56E3B0B0D
+:END:
+
+Enter
+
+#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_95AD38F8-9C9A-4C2B-AED4-8D111247BEFE
+#+begin_src sh
+mkdir 02
+cd 02
+#+end_src
+
+[[https://support.apple.com/kb/dl304?locale=en_US][X11 Update 2006]] | Version: 1.1.3
+
+#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_92042180-3F86-4211-80D3-8600F3A136D6
+#+begin_src sh
+tgrdltxt "https://support.apple.com/kb/dl304?locale=en_US" "X11 Update 2006.html"
+
+tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2901.20061113.iUnrq/X11Update2006.dmg"
+#+end_src
+
+[[https://support.apple.com/kb/DL713?locale=en_US][Migration and DVD/CD Sharing Update]] | Version: 1.1
+
+#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_27F92313-0879-425C-8F8F-4B7D0789FF7E
+#+begin_src sh
+tgrdltxt "https://support.apple.com/kb/DL713?locale=en_US" "Migration and DVD/CD Sharing Update.html"
+
+tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-5623.20081016.mju2Q/MigrationDVDCDSharingUp.dmg"
+#+end_src
+
+[[https://support.apple.com/kb/dl838?locale=en_US][QuickTime]] | Version: 7.6.4
+
+#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_F22C2F4E-B97C-46E6-85BE-5E6B33DBA96B
+#+begin_src sh
+tgrdltxt "https://support.apple.com/kb/dl838?locale=en_US" "QuickTime"
+
+tgrdlbin "https://secure-appldnld.apple.com/QuickTime/061-6742.20090909.TgQt4/QuickTime764_Tiger.dmg"
+#+end_src
+
+[[https://support.apple.com/kb/DL931?locale=en_US][Security Update 2009-005 (PowerPC)]] | Version: 1.0
+
+#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_4870AD67-D534-4B6B-89AF-8059319C3D40
+#+begin_src sh
+tgrdltxt "https://support.apple.com/kb/DL931?locale=en_US" "Security Update 2009-005 (PowerPC)"
+
+tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-7100.20090910.Scdfr/SecUpd2009-005PPC.dmg"
+#+end_src
+
+Exit
+
+#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_B9DD0E13-A1C0-4489-85D9-AAB07FDE7604
+#+begin_src sh
+cd "$TGRSRC"
+#+end_src
+
+** Round Three
+:PROPERTIES:
+:ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:C2FDE0A1-C0D6-4602-9173-1BA9A38BE895
+:END:
+
+Enter
+
+#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_97A238EF-F8CA-46D7-B557-20A793056DEF
+#+begin_src sh
+mkdir 03
+cd 03
+#+end_src
+
+asdf
+
+#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_F5208760-7B5E-4315-90E1-E987BD4D7EDE
+#+begin_src sh
+tgrdltxt "" ".html"
+
+tgrdlbin ""
+#+end_src
+
+sadf
+
+#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_B26742C5-C3AE-4B9A-8500-D7F2FB3559AA
+#+begin_src sh
+tgrdltxt "" ".html"
+
+tgrdlbin ""
+#+end_src
+
+Exit
+
+#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_B9DD0E13-A1C0-4489-85D9-AAB07FDE7604
+#+begin_src sh
+cd "$TGRSRC"
+#+end_src
+
+** Round Four
+:PROPERTIES:
+:ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:CA1FA509-485E-4479-BFE0-9CB9AE347904
+:END:
+
+AKA "Java Updates".
+
+"The Network is the Computer": [[https://en.wikipedia.org/wiki/Sun_Microsystems][Sun]] we miss you!
+
+Enter
+
+#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_14779636-F814-4EDC-9D90-50A0182A2AC8
+#+begin_src sh
+mkdir 04
+cd 04
+#+end_src
+
+5
+
+#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_B64C035C-C48F-4D20-9851-028051118218
+#+begin_src sh
+tgrdltxt "" ".html"
+
+tgrdlbin ""
+#+end_src
+
+6
+
+#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_05D6B582-4746-4BD8-932D-C2000C5206D4
+#+begin_src sh
+tgrdltxt "" ".html"
+
+tgrdlbin ""
+
+#+end_src
+
+7
+
+#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_5320C890-0206-407B-8282-57781BBD2B0C
+#+begin_src sh
+tgrdltxt "" ".html"
+
+tgrdlbin ""
+#+end_src
+
+#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_9F1134B6-4CD0-4071-89B8-15381EAC99C6
+#+begin_src sh
+tgrdltxt "" ".html"
+
+tgrdlbin ""
+#+end_src
+
+8
+
+#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_F61CA741-C1BE-41F1-BF01-34FD3C4F1EA0
+#+begin_src sh
+tgrdltxt "" ".html"
+
+tgrdlbin ""
+#+end_src
+
+9
+
+#+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_E22EAB2E-136C-4108-8193-435A1E23F9D2
+#+begin_src sh
+tgrdltxt "" ".html"
+
+tgrdlbin ""
+#+end_src
+
+Exit
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_B9DD0E13-A1C0-4489-85D9-AAB07FDE7604
 #+begin_src sh
