@@ -2,6 +2,9 @@
 #+property: header-args :tangle tigerupdates.sh :eval no :comments no :shebang "#!/usr/bin/env bash" :tangle-mode (identity #o755)
 
 * TL;DR
+:PROPERTIES:
+:ID:       org_grant_2022-07-06T12-27-31-05-00_donutron:A8AA10A5-FC67-4B8A-A204-46CFCF4CAAA3
+:END:
 
 Auto Download & Verify Your Official Mac OS X 10.4 Tiger Updates While They Still Last!
 
@@ -218,7 +221,7 @@ This page links to [[https://support.apple.com/en-us/HT201941][About QuickTime 7
 #+BEGIN_SRC sh
 tgrdltxt "https://support.apple.com/kb/dl838?locale=en_US" "QuickTime.html"
 
-tgrdltxt "https://support.apple.com/en-us/HT201941" "About QuickTime 7.6.4"
+tgrdltxt "https://support.apple.com/en-us/HT201941" "About QuickTime 7.6.4.html"
 
 tgrdlbin "https://secure-appldnld.apple.com/QuickTime/061-6742.20090909.TgQt4/QuickTime764_Tiger.dmg"
 #+END_SRC
@@ -348,7 +351,7 @@ tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-4472.20080918.l9a3n/JavaF
 #+BEGIN_SRC sh
 tgrdltxt "https://support.apple.com/kb/DL776?locale=en_US" "Java for Mac OS X 10.4, Release 8.html"
 
-tgrdltxt "https://support.apple.com/en-us/HT3373" "About Java for Mac OS X 10.4, Release 8"
+tgrdltxt "https://support.apple.com/en-us/HT3373" "About Java for Mac OS X 10.4, Release 8.html"
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-5909.20090212.wqErt/JavaForMacOSX10.4Release8.dmg"
 #+END_SRC
@@ -359,7 +362,7 @@ tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-5909.20090212.wqErt/JavaF
 #+BEGIN_SRC sh
 tgrdltxt "https://support.apple.com/kb/dl847?locale=en_US" "Java for Mac OS X 10.4, Release 9.html"
 
-tgrdltxt "https://support.apple.com/en-us/HT3593" "About Java for Mac OS X v10.4, Release 9"
+tgrdltxt "https://support.apple.com/en-us/HT3593" "About Java for Mac OS X v10.4, Release 9.html"
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-6614.20090615.jVa9r/JavaForMacOSX10.4Release9.dmg"
 #+END_SRC
@@ -498,7 +501,7 @@ Slowly review the results to make sure that
 #+begin_src sh
 cd "$TGRSRC"
 cd 01
-tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-01.sha1" "ROUND-01.sha1"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-01.SHA1" "ROUND-01.SHA1"
 shasum --check ROUND-01.SHA1
 tgrslp 10
 cd ..
@@ -514,7 +517,7 @@ MacOSXUpdCombo10.4.11PPC.dmg: OK
 #+name: org_grant_2022-07-06T12-27-31-05-00_donutron_4F4F1513-7213-43DA-BA1B-BAADDFEF3181
 #+begin_src sh
 cd 02
-tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-02.sha1" "ROUND-02.sha1"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-02.SHA1" "ROUND-01.SHA2"
 shasum --check ROUND-02.SHA1
 tgrslp 10
 cd ..
@@ -529,7 +532,7 @@ SecUpd2009-005PPC.dmg: OK
 #+name: org_grant_2022-07-06T12-27-31-05-00_donutron_0464C8F5-8137-4770-BB13-08A090D07590
 #+begin_src sh
 cd 03
-tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-03.sha1" "ROUND-03.sha1"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-03.SHA1" "ROUND-03.SHA1"
 shasum --check ROUND-03.SHA1
 tgrslp 10
 cd ..
@@ -546,7 +549,7 @@ shasum: WARNING: 1 computed checksum did NOT match
 #+name: org_grant_2022-07-06T12-27-31-05-00_donutron_8681BF0C-906C-429F-BB81-C67D48CB5A8C
 #+begin_src sh
 cd 04
-tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-04.sha1" "ROUND-04.sha1"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-04.SHA1" "ROUND-04.SHA1"
 shasum --check ROUND-04.SHA1
 tgrslp 10
 cd ..

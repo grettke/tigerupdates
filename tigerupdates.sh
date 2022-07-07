@@ -70,7 +70,7 @@ tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-5623.20081016.mju2Q/Migra
 
 tgrdltxt "https://support.apple.com/kb/dl838?locale=en_US" "QuickTime.html"
 
-tgrdltxt "https://support.apple.com/en-us/HT201941" "About QuickTime 7.6.4"
+tgrdltxt "https://support.apple.com/en-us/HT201941" "About QuickTime 7.6.4.html"
 
 tgrdlbin "https://secure-appldnld.apple.com/QuickTime/061-6742.20090909.TgQt4/QuickTime764_Tiger.dmg"
 
@@ -114,13 +114,13 @@ tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-4472.20080918.l9a3n/JavaF
 
 tgrdltxt "https://support.apple.com/kb/DL776?locale=en_US" "Java for Mac OS X 10.4, Release 8.html"
 
-tgrdltxt "https://support.apple.com/en-us/HT3373" "About Java for Mac OS X 10.4, Release 8"
+tgrdltxt "https://support.apple.com/en-us/HT3373" "About Java for Mac OS X 10.4, Release 8.html"
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-5909.20090212.wqErt/JavaForMacOSX10.4Release8.dmg"
 
 tgrdltxt "https://support.apple.com/kb/dl847?locale=en_US" "Java for Mac OS X 10.4, Release 9.html"
 
-tgrdltxt "https://support.apple.com/en-us/HT3593" "About Java for Mac OS X v10.4, Release 9"
+tgrdltxt "https://support.apple.com/en-us/HT3593" "About Java for Mac OS X v10.4, Release 9.html"
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-6614.20090615.jVa9r/JavaForMacOSX10.4Release9.dmg"
 
@@ -145,25 +145,25 @@ shasum --check sha1test.sha1
 
 cd "$TGRSRC"
 cd 01
-tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-01.sha1" "ROUND-01.sha1"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-01.SHA1" "ROUND-01.SHA1"
 shasum --check ROUND-01.SHA1
 tgrslp 10
 cd ..
 
 cd 02
-tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-02.sha1" "ROUND-02.sha1"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-02.SHA1" "ROUND-01.SHA2"
 shasum --check ROUND-02.SHA1
 tgrslp 10
 cd ..
 
 cd 03
-tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-03.sha1" "ROUND-03.sha1"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-03.SHA1" "ROUND-03.SHA1"
 shasum --check ROUND-03.SHA1
 tgrslp 10
 cd ..
 
 cd 04
-tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-04.sha1" "ROUND-04.sha1"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-04.SHA1" "ROUND-04.SHA1"
 shasum --check ROUND-04.SHA1
 tgrslp 10
 cd ..
