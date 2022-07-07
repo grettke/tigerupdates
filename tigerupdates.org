@@ -517,7 +517,7 @@ MacOSXUpdCombo10.4.11PPC.dmg: OK
 #+name: org_grant_2022-07-06T12-27-31-05-00_donutron_4F4F1513-7213-43DA-BA1B-BAADDFEF3181
 #+begin_src sh
 cd 02
-tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-02.SHA1" "ROUND-01.SHA2"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-02.SHA1" "ROUND-02.SHA2"
 shasum --check ROUND-02.SHA1
 tgrslp 10
 cd ..

@@ -151,7 +151,7 @@ tgrslp 10
 cd ..
 
 cd 02
-tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-02.SHA1" "ROUND-01.SHA2"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-02.SHA1" "ROUND-02.SHA2"
 shasum --check ROUND-02.SHA1
 tgrslp 10
 cd ..
