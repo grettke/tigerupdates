@@ -158,16 +158,16 @@ mkdir 01
 cd 01
 #+END_SRC
 
-[[https://support.apple.com/kb/DL441?locale=en_US][Java 1.3.1 and 1.4.2 Release 2]] | Version: 2.0
+[[https://support.apple.com/kb/DL441?locale=en_US][Java 1.3.1 and 1.4.2 Release 2]] | Version 2.0
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_B1CA0C4E-A027-4F7D-96DD-31326BED2078
 #+BEGIN_SRC sh
-tgrdltxt "https://support.apple.com/kb/DL441?locale=en_US" "Java 1.3.1 and 1.4.2 Release 2 | Version: 2.0.html"
+tgrdltxt "https://support.apple.com/kb/DL441?locale=en_US" "Java 1.3.1 and 1.4.2 Release 2 | Version 2.0.html"
 
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2072.20050913.jVTr2/Java131and142Release2.dmg"
 #+END_SRC
 
-[[https://support.apple.com/kb/dl170?locale=en_US][Mac OS X Update Combined (PowerPC)]] | Version: 10.4.11
+[[https://support.apple.com/kb/dl170?locale=en_US][Mac OS X Update Combined (PowerPC)]] | Version 10.4.11
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_DB267147-EBEE-4736-8038-2DD45BCF4689
 #+BEGIN_SRC sh
@@ -196,7 +196,7 @@ mkdir 02
 cd 02
 #+END_SRC
 
-[[https://support.apple.com/kb/DL713?locale=en_US][Migration and DVD/CD Sharing Update]] | Version: 1.1
+[[https://support.apple.com/kb/DL713?locale=en_US][Migration and DVD/CD Sharing Update]] | Version 1.1
 
 This page links to [[https://web.archive.org/web/20141115055144/https://support.apple.com/en-us/HT3174][About the Migration and DVD/CD Sharing Update]].
 
@@ -211,7 +211,7 @@ tgrdltxt "https://web.archive.org/web/20141115055144/https://support.apple.com/e
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-5623.20081016.mju2Q/MigrationDVDCDSharingUp.dmg"
 #+END_SRC
 
-[[https://support.apple.com/kb/dl838?locale=en_US][QuickTime]] | Version: 7.6.4
+[[https://support.apple.com/kb/dl838?locale=en_US][QuickTime]] | Version 7.6.4
 
 This page links to [[https://support.apple.com/en-us/HT201941][About QuickTime 7.6.4]].
 
@@ -226,7 +226,7 @@ tgrdltxt "https://support.apple.com/en-us/HT201941" "About QuickTime 7.6.4.html"
 tgrdlbin "https://secure-appldnld.apple.com/QuickTime/061-6742.20090909.TgQt4/QuickTime764_Tiger.dmg"
 #+END_SRC
 
-[[https://support.apple.com/kb/DL931?locale=en_US][Security Update 2009-005 (PowerPC)]] | Version: 1.0
+[[https://support.apple.com/kb/DL931?locale=en_US][Security Update 2009-005 (PowerPC)]] | Version 1.0
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_4870AD67-D534-4B6B-89AF-8059319C3D40
 #+BEGIN_SRC sh
@@ -235,7 +235,7 @@ tgrdltxt "https://support.apple.com/kb/DL931?locale=en_US" "Security Update 2009
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-7100.20090910.Scdfr/SecUpd2009-005PPC.dmg"
 #+END_SRC
 
-[[https://support.apple.com/kb/dl304?locale=en_US][X11 Update 2006]] | Version: 1.1.3
+[[https://support.apple.com/kb/dl304?locale=en_US][X11 Update 2006]] | Version 1.1.3
 
 *WARNING*: Apple did not provide an ~SHA1~ for this Software Update.
 
@@ -266,7 +266,7 @@ mkdir 03
 cd 03
 #+END_SRC
 
-[[https://support.apple.com/kb/DL380?locale=en_US][J2SE 5.0 Release 4]] | Version: 4.0
+[[https://support.apple.com/kb/DL380?locale=en_US][J2SE 5.0 Release 4]] | Version 4.0
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_F5208760-7B5E-4315-90E1-E987BD4D7EDE
 #+BEGIN_SRC sh
@@ -275,7 +275,7 @@ tgrdltxt "https://support.apple.com/kb/DL380?locale=en_US" "J2SE 5.0 Release 4.h
 tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2243.20060417.JvpPc/J2SE50Release4.dmg"
 #+END_SRC
 
-[[https://web.archive.org/web/20130616225610/http://support.apple.com/kb/dl1069][Safari]] | Version: 4.1.3
+[[https://web.archive.org/web/20130616225610/http://support.apple.com/kb/dl1069][Safari]] | Version 4.1.3
 
 *WARNING*: The ~SHA1~ checksum of the downloaded file does not match with the checksum listed on the web page!
 
