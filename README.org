@@ -9,3 +9,5 @@ If you are an elite hacker than download review and run [[https://raw.githubuser
 Otherwise (I'd recommend that you)
 
 [[./tigerupdates.org][START HERE]]
+
+Alternatively someone provided them, without checksums, on [[https://macintoshgarden.org/apps/mac-osx-mac-os-10-ppc][The Garden]]: #31 (Not vouching for this just referencing!)
