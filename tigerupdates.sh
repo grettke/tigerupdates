@@ -131,7 +131,7 @@ tgrdltxt "https://web.archive.org/web/20141111085423/https://support.apple.com/e
 
 cd "$TGRSRC"
 tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/sha1test.org" "sha1test.org"
-tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/sha1test.org" "sha1test.sha1"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/sha1test.sha1" "sha1test.sha1"
 printf "Validating SHA sample test file:\n"
 shasum --check sha1test.sha1
 
