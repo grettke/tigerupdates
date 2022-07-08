@@ -126,10 +126,6 @@ tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-6614.20090615.jVa9r/JavaF
 
 cd "$TGRSRC"
 
-hdiutil verify "tigerupdates.dmg"
-
-hdiutil attach "tigerupdates.dmg"
-
 cd "$TGRSRC"
 tgrdltxt "https://web.archive.org/web/20141111085423/https://support.apple.com/en-us/HT201259" "Mac OS X: How to verify a SHA-1 digest.html"
 
@@ -175,3 +171,7 @@ open "$TGRDST"
 
 cd "$TGRDST"
 tgrmkdmg "$TGRSRC"
+
+hdiutil verify "tigerupdates.dmg"
+
+hdiutil attach "tigerupdates.dmg"

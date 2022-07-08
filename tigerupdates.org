@@ -399,40 +399,6 @@ There are two steps to verifying these files:
 - The DMG file itself
 - The Software Update files
 
-** Tiger Updates DMG
-:PROPERTIES:
-:ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:131B597E-DC8F-4382-B4E6-CC407B1CCE3F
-:END:
-
-Did anybody mess with the DMG you just created?
-
-Is read-only so theoretically can not be modified after creation (likely can be easily)
-
-You can answer that by verifying it has a valid checksum though: it is built in.
-
-Verify it:
-
-#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_B07F222C-9C03-4F59-9B01-F67CAE8E3DC6
-#+BEGIN_SRC sh
-hdiutil verify "tigerupdates.dmg"
-#+END_SRC
-
-You should see this verbatim
-
-#+begin_export ascii
-verified   CRC32 $5C30E434
-hdiutil: verify: checksum of "tigerupdates.dmg" is VALID
-#+end_export
-
-Mount it and have a look. You'll need it mounted later anyway.
-
-#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_4E24DA9D-2E62-45CE-B9F7-4AD81CC6678F
-#+BEGIN_SRC sh
-hdiutil attach "tigerupdates.dmg"
-#+END_SRC
-
-Check up above with the /Verify it/ code block. If this reports VALID than you can trust that the DMG was not modified since its creation. However the individual update files still need to be validated.
-
 ** SHA1 Checksum HOWTO
 :PROPERTIES:
 :ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:B3D6EF8D-5014-4D36-9F61-8D3CD73B8EF0
@@ -569,6 +535,11 @@ JavaForMacOSX10.4Release9.dmg: OK
 :ID:       org_grant_2022-07-03T23-41-50-05-00_donutron:56835D75-DD95-4A3D-9FEA-7B9C46EBA3ED
 :END:
 
+** Creation
+:PROPERTIES:
+:ID:       org_grant_2022-07-08T00-38-16-05-00_donutron:F726B7F1-7BB3-4194-8EA2-61C509A70E07
+:END:
+
 Open the DMG directory:
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_6C089E9B-5709-4E75-B1F7-93F24510FA18
@@ -583,6 +554,40 @@ Create it. The command doesn't overwrite the DMG. Although there is a flag for t
 #+BEGIN_SRC sh
 cd "$TGRDST"
 tgrmkdmg "$TGRSRC"
+#+END_SRC
+
+** Verification
+:PROPERTIES:
+:ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:131B597E-DC8F-4382-B4E6-CC407B1CCE3F
+:END:
+
+Did anybody mess with the DMG you just created?
+
+Is read-only so theoretically can not be modified after creation (likely can be easily)
+
+You can answer that by verifying it has a valid checksum though: it is built in.
+
+Verify it:
+
+#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_B07F222C-9C03-4F59-9B01-F67CAE8E3DC6
+#+BEGIN_SRC sh
+hdiutil verify "tigerupdates.dmg"
+#+END_SRC
+
+You should see this verbatim
+
+#+begin_export ascii
+verified   CRC32 $5C30E434
+hdiutil: verify: checksum of "tigerupdates.dmg" is VALID
+#+end_export
+
+It is created correctly
+
+Mount it and have a look. You'll need it mounted later anyway.
+
+#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_4E24DA9D-2E62-45CE-B9F7-4AD81CC6678F
+#+BEGIN_SRC sh
+hdiutil attach "tigerupdates.dmg"
 #+END_SRC
 
 * Conclusion
