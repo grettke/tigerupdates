@@ -195,7 +195,7 @@ cd "$TGRSRC"
 *WARNING*
 - There are 4 Software Updates here
 - Only 1 has a checksum
-- The other 1 does not
+- The other 3 do not
 
 Enter
 
@@ -224,7 +224,7 @@ tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-5623.20081016.mju2Q/Migra
 
 This page links to [[https://support.apple.com/en-us/HT201941][About QuickTime 7.6.4]].
 
-*WARNING*: Apple did not provide an ~SHA1~ for this Software Update on either page.
+*WARNING*: Apple did not provide an ~SHA1~ for this Software Update on either page. Might be better to install this from the Software Updates user interface.
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_F22C2F4E-B97C-46E6-85BE-5E6B33DBA96B
 #+BEGIN_SRC sh
@@ -246,7 +246,7 @@ tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-7100.20090910.Scdfr/SecUp
 
 [[https://support.apple.com/kb/dl304?locale=en_US][X11 Update 2006]] | Version 1.1.3
 
-*WARNING*: Apple did not provide an ~SHA1~ for this Software Update.
+*WARNING*: Apple did not provide an ~SHA1~ for this Software Update. Might be better to install this from the Software Updates user interface.
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_92042180-3F86-4211-80D3-8600F3A136D6
 #+BEGIN_SRC sh
@@ -267,11 +267,9 @@ cd "$TGRSRC"
 :ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:C2FDE0A1-C0D6-4602-9173-1BA9A38BE895
 :END:
 
-*WARNING*
+*NOTE*
 - There are 2 Software Updates here
-- Both have a checksum
-- However the one for Safari reports the download is invalid
-  - Consider obtaining it from Software Update instead of the download
+- Each of them has a checksum
 
 Enter
 
@@ -291,8 +289,6 @@ tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2243.20060417.JvpPc/J2SE5
 #+END_SRC
 
 [[https://web.archive.org/web/20130616225610/http://support.apple.com/kb/dl1069][Safari]] | Version 4.1.3
-
-*WARNING*: The ~SHA1~ checksum of the downloaded file does not match with the checksum listed on the web page!
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_B26742C5-C3AE-4B9A-8500-D7F2FB3559AA
 #+BEGIN_SRC sh
@@ -334,7 +330,7 @@ cd 04
 
 This page links to [[http://support.apple.com/kb/HT1523][About Java for Mac OS X 10.4, Release 5]]. It is no longer available. It isn't available on the [[https://web.archive.org/web/*/https://support.apple.com/en-us/HT1523][Wayback Machine]] either.
 
-*WARNING*: Apple did not provide an ~SHA1~ for this Software Update.
+*WARNING*: Apple did not provide an ~SHA1~ for this Software Update. Might be better to install this from the Software Updates user interface.
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_B64C035C-C48F-4D20-9851-028051118218
 #+BEGIN_SRC sh
@@ -345,7 +341,7 @@ tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-2829.20070215.Tj5Up/JavaF
 
 [[https://support.apple.com/kb/dl152?locale=en_US][Java for Mac OS X 10.4, Release 6]]
 
-*WARNING*: Apple did not provide an ~SHA1~ for this Software Update.
+*WARNING*: Apple did not provide an ~SHA1~ for this Software Update. Might be better to install this from the Software Updates user interface.
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_05D6B582-4746-4BD8-932D-C2000C5206D4
 #+BEGIN_SRC sh
@@ -356,7 +352,7 @@ tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-4073.20071213.b64Us/JavaF
 
 [[https://support.apple.com/kb/DL699?locale=en_US][Java for Mac OS X 10.4, Release 7]]
 
-*WARNING*: Apple did not provide an ~SHA1~ for this Software Update.
+*WARNING*: Apple did not provide an ~SHA1~ for this Software Update. Might be better to install this from the Software Updates user interface.
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_5320C890-0206-407B-8282-57781BBD2B0C
 #+BEGIN_SRC sh
