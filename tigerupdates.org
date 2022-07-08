@@ -390,27 +390,6 @@ Exit
 cd "$TGRSRC"
 #+END_SRC
 
-* Disk Image
-:PROPERTIES:
-:ID:       org_grant_2022-07-03T23-41-50-05-00_donutron:56835D75-DD95-4A3D-9FEA-7B9C46EBA3ED
-:END:
-
-Open the DMG directory:
-
-#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_6C089E9B-5709-4E75-B1F7-93F24510FA18
-#+BEGIN_SRC sh
-open "$TGRDST"
-#+END_SRC
-
-Create it. The command doesn't overwrite the DMG. Although there is a flag for that optimization: experience has shown that to be a regrettable approach despite it being very /speed hackery/.
-
-#+ NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_39D17A7C-F94A-491C-8C00-1D8591D547F1
-#+NAME: org_grant_2022-07-06T12-27-31-05-00_donutron_37D3728E-2F26-4EB0-98B8-DFDD9A42DB02
-#+BEGIN_SRC sh
-cd "$TGRDST"
-tgrmkdmg "$TGRSRC"
-#+END_SRC
-
 * Verification
 :PROPERTIES:
 :ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:C2BBE524-FE7C-41FC-974C-80A9B9B66726
@@ -584,6 +563,27 @@ You should see this verbatim
 JavaForMacOSX10.4Release8.dmg: OK
 JavaForMacOSX10.4Release9.dmg: OK
 #+end_export
+
+* Disk Image
+:PROPERTIES:
+:ID:       org_grant_2022-07-03T23-41-50-05-00_donutron:56835D75-DD95-4A3D-9FEA-7B9C46EBA3ED
+:END:
+
+Open the DMG directory:
+
+#+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_6C089E9B-5709-4E75-B1F7-93F24510FA18
+#+BEGIN_SRC sh
+open "$TGRDST"
+#+END_SRC
+
+Create it. The command doesn't overwrite the DMG. Although there is a flag for that optimization: experience has shown that to be a regrettable approach despite it being very /speed hackery/.
+
+#+ NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_39D17A7C-F94A-491C-8C00-1D8591D547F1
+#+NAME: org_grant_2022-07-06T12-27-31-05-00_donutron_37D3728E-2F26-4EB0-98B8-DFDD9A42DB02
+#+BEGIN_SRC sh
+cd "$TGRDST"
+tgrmkdmg "$TGRSRC"
+#+END_SRC
 
 * Conclusion
 :PROPERTIES:

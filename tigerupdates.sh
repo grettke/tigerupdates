@@ -126,11 +126,6 @@ tgrdlbin "https://download.info.apple.com/Mac_OS_X/061-6614.20090615.jVa9r/JavaF
 
 cd "$TGRSRC"
 
-open "$TGRDST"
-
-cd "$TGRDST"
-tgrmkdmg "$TGRSRC"
-
 hdiutil verify "tigerupdates.dmg"
 
 hdiutil attach "tigerupdates.dmg"
@@ -175,3 +170,8 @@ ls -l *.dmg
 shasum --check ROUND-04.SHA1
 tgrslp 10
 cd ..
+
+open "$TGRDST"
+
+cd "$TGRDST"
+tgrmkdmg "$TGRSRC"
