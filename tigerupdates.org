@@ -200,7 +200,7 @@ cd 02
 
 This page links to [[https://web.archive.org/web/20141115055144/https://support.apple.com/en-us/HT3174][About the Migration and DVD/CD Sharing Update]].
 
-*WARNING*: Apple did not provide an ~SHA1~ for this Software Update on either page.
+*WARNING*: Apple did not provide an ~SHA1~ for this Software Update on either page. Might be better to install this from the Software Updates user interface.
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_27F92313-0879-425C-8F8F-4B7D0789FF7E
 #+BEGIN_SRC sh
