@@ -589,6 +589,23 @@ Mount it and have a look. You'll need it mounted later anyway.
 #+BEGIN_SRC sh
 hdiutil attach "tigerupdates.dmg"
 #+END_SRC
+** Checksum
+:PROPERTIES:
+:ID:       org_grant_2022-07-08T00-38-16-05-00_donutron:FB519CA6-365B-49DA-A19F-5234045B821D
+:END:
+
+Create and check it.
+
+#+NAME: org_grant_2022-07-08T00-38-16-05-00_donutron_A454CFF6-6D61-4B0A-84DB-70D45112394F
+#+begin_src sh
+shasum tigerupdates.dmg > tigerupdates.sha1 && chmod 444 tigerupdates.sha1
+#+end_src
+
+You should see this verbatim
+
+#+begin_export ascii
+tigerupdates.dmg: OK
+#+end_export
 
 * Conclusion
 :PROPERTIES:

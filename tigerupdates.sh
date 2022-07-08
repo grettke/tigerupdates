@@ -175,3 +175,5 @@ tgrmkdmg "$TGRSRC"
 hdiutil verify "tigerupdates.dmg"
 
 hdiutil attach "tigerupdates.dmg"
+
+shasum tigerupdates.dmg > tigerupdates.sha1 && chmod 444 tigerupdates.sha1
