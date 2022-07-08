@@ -415,7 +415,7 @@ Download Apple's page on how to verify SHA-1 checksums:
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_B22EE2AD-A321-48B1-99C2-C733661355B4
 #+begin_src sh
 cd "$TGRSRC"
-tgrdltxt "https://web.archive.org/web/20141111085423/https://support.apple.com/en-us/HT201259" "Mac OS X: How to verify a SHA-1 digest.html"
+tgrdltxt "https://web.archive.org/web/20141111085423/https://support.apple.com/en-us/HT201259" "Mac OS X How to verify a SHA-1 digest.html"
 #+end_src
 
 Each update file's documentation page includes a SHA1 checksum to verify the file with. Here is a [[https://web.archive.org/web/20141111085423/https://support.apple.com/en-us/HT201259][cached link of "How to verify a SHA-1 digest"]]. TL;DR generate the checksum by hand for every Software Update and visually compare it to the checksum on the web page. For the sake of valuing your time and mine I'll copy the checksums into a file so we can verify them automatically.
