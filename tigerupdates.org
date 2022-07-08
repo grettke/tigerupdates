@@ -150,6 +150,10 @@ It is less surprising to manually create and enter the directories instead of us
 :ID:       org_grant_2022-07-03T23-41-50-05-00_donutron:1C5F1A22-0100-40BA-9305-6078EA354E4E
 :END:
 
+*NOTE*
+- There are 2 Software Updates here
+- Each of them has a checksum
+
 Enter
 
 #+NAME: org_grant_2022-07-03T23-41-50-05-00_donutron_51FF1A44-2F66-4AB7-9722-11F7C2AD1F3F
@@ -187,6 +191,11 @@ cd "$TGRSRC"
 :PROPERTIES:
 :ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:C3DA226A-C596-4C75-86DC-07F56E3B0B0D
 :END:
+
+*WARNING*
+- There are 4 Software Updates here
+- Only 1 has a checksum
+- The other 1 does not
 
 Enter
 
@@ -258,6 +267,12 @@ cd "$TGRSRC"
 :ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:C2FDE0A1-C0D6-4602-9173-1BA9A38BE895
 :END:
 
+*WARNING*
+- There are 2 Software Updates here
+- Both have a checksum
+- However the one for Safari reports the download is invalid
+  - Consider obtaining it from Software Update instead of the download
+
 Enter
 
 #+NAME: org_grant_2022-07-05T20-54-38-05-00_donutron_97A238EF-F8CA-46D7-B557-20A793056DEF
@@ -301,6 +316,11 @@ cd "$TGRSRC"
 AKA "Java Software Update".
 
 "The Network is the Computer": [[https://en.wikipedia.org/wiki/Sun_Microsystems][Sun]] we miss you!
+
+*WARNING*
+- There are 5 Software Updates here
+- Only 2 have a checksum
+- The other 3 do not
 
 Enter
 
