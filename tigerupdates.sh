@@ -146,24 +146,32 @@ shasum --check sha1test.sha1
 cd "$TGRSRC"
 cd 01
 tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-01.SHA1" "ROUND-01.SHA1"
+printf "Verifying these DMGs if they have a checksum:\n"
+ls *.dmg
 shasum --check ROUND-01.SHA1
 tgrslp 10
 cd ..
 
 cd 02
-tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-02.SHA1" "ROUND-02.SHA2"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-02.SHA1" "ROUND-02.SHA1"
+printf "Verifying these DMGs if they have a checksum:\n"
+ls *.dmg
 shasum --check ROUND-02.SHA1
 tgrslp 10
 cd ..
 
 cd 03
 tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-03.SHA1" "ROUND-03.SHA1"
+printf "Verifying these DMGs if they have a checksum:\n"
+ls *.dmg
 shasum --check ROUND-03.SHA1
 tgrslp 10
 cd ..
 
 cd 04
 tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-04.SHA1" "ROUND-04.SHA1"
+printf "Verifying these DMGs if they have a checksum:\n"
+ls *.dmg
 shasum --check ROUND-04.SHA1
 tgrslp 10
 cd ..
