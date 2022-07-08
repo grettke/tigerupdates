@@ -10,4 +10,4 @@ Otherwise (I'd recommend that you)
 
 [[./tigerupdates.org][START HERE]]
 
-Alternatively someone provided them, without checksums, on [[https://macintoshgarden.org/apps/mac-osx-mac-os-10-ppc][The Garden]]: #31 (Not vouching for this just referencing!)
+Alternatively someone provided them, without checksums, on [[https://macintoshgarden.org/apps/mac-osx-mac-os-10-ppc][The Garden]]: #31 (Love that person, and The Garden, just not vouching for this only referencing!) However, everything on there is a great so it is probably fine.
