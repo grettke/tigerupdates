@@ -563,7 +563,7 @@ You should see this verbatim
 
 #+begin_export ascii
 J2SE50Release4.dmg: OK
-Safari4.1.3Tiger.dmg: FAILED
+Safari4.1.3Tiger.dmg: OK
 shasum: WARNING: 1 computed checksum did NOT match
 #+end_export
 
