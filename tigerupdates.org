@@ -424,7 +424,7 @@ There are two steps to verifying these files:
 - The DMG file itself
 - The Software Update files
 
-** DMG
+** Tiger Updates DMG
 :PROPERTIES:
 :ID:       org_grant_2022-07-05T20-54-38-05-00_donutron:131B597E-DC8F-4382-B4E6-CC407B1CCE3F
 :END:
@@ -576,7 +576,7 @@ shasum: WARNING: 1 computed checksum did NOT match
 #+begin_src sh
 cd 04
 tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/ROUND-04.SHA1" "ROUND-04.SHA1"
-printf "Verifying these DMGs if they have a checksum:\n"
+printf "Verifying these DMGs if they have a checksum:\n"rify
 ls *.dmg
 shasum --check ROUND-04.SHA1
 tgrslp 10
