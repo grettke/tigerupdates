@@ -433,8 +433,8 @@ Download them and verify it:
 #+NAME: org_grant_2022-07-06T12-27-31-05-00_donutron_E346E8CB-1921-4607-86B3-6CD0FE43AD1E
 #+begin_src sh
 cd "$TGRSRC"
-tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/tigerupdates.org" "sha1test.org"
-tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/tigerupdates.org" "sha1test.sha1"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/sha1test.org" "sha1test.org"
+tgrdltxt "https://raw.githubusercontent.com/grettke/tigerupdates/main/sha1test.org" "sha1test.sha1"
 shasum --check sha1test.sha1
 #+end_src
 You should see this verbatim
